@@ -19,12 +19,68 @@ get_header();
     <div class="row"> 
         <div class="col-2 side-bar"> 
             <div class="side-inner"> 
-                asdad
+                <?php echo do_shortcode('[caf_filter id="863"]'); ?>
             </div>
         </div>
         <div class="col-10">
             <div class="main-body">
-                asdad
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row"> 
+                            <div class="col-1"> Bed</div>
+                            <div class="col-2"> Patient Name</div>
+                            <div class="col-2"> Patient Number</div>
+                            <div class="col-2"> Date of Admission</div>
+                            <div class="col-2"> Date of Discharge</div>
+                            <div class="col-2"> Bed Status</div>
+                            <div class="col-1"> </div>
+                        </div>
+                    </div>
+                    <ul class="list-group list-group-flush">
+
+                    <?php
+                        $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
+                        $args = array('post_type'=>'bed','posts_per_page' => 13,'paged' => $paged);
+                        $the_query = new WP_Query($args);
+                        if ( $the_query->have_posts() ):
+                            while ( $the_query->have_posts() ) : $the_query->the_post(); ?>   
+
+                                <li class="list-group-item ">
+                                    <div class="row"> 
+                                        <div class="col-1"> <?php the_title();?></div>
+                                        <div class="col-2"> <?php the_field('patient_name');?></div>
+                                        <div class="col-2"> <?php the_field('patient_number');?></div>
+                                        <div class="col-2"> <?php the_field('date_of_admission');?></div>
+                                        <div class="col-2"> <?php the_field('date_of_discharge');?></div>
+                                        <div class="col-2"> 
+
+                                        <?php 
+
+                                        if( get_field('bed_status') == 'Occupied' ): ?> 
+                                            <p style="color: red;">Occupied</p>
+                                        <?php   
+                                        elseif( get_field('bed_status') == 'Unavailable' ): ?> 
+                                            <p style="color: red;">Unavailable</p>
+                                        <?php
+                                        else: ?> 
+                                            <p style="color: green;">Available</p>    
+                                                        
+                                        <?php endif; ?>
+
+                                        </div>
+                                        <div class="col-1"><?php  edit_post_link(__('Edit')); ?></div>
+                                    </div>
+                                </li>
+
+                                <?php endwhile; ?>
+                                    <nav class="pagination pagination-bed">
+                                        <?php pagination_bar( $the_query ); ?>
+                                    </nav>
+                                <?php wp_reset_postdata();
+                                endif;?>
+
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

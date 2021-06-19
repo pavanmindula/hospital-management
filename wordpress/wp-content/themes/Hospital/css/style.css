@@ -79,3 +79,62 @@ body {
     padding: 40px 50px;
 
 }
+.card-header{
+    font-family: 'Fira Sans', sans-serif; 
+    font-size: 16px;
+    font-weight: 500;
+}
+.center-trigger .center{
+    text-align: center;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 0rem !important;
+}
+.post-edit-link{
+    background-color: #000;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-decoration: none !important;
+}
+.post-edit-link:hover{
+    background-color: red;
+    color: #fff !important;
+    border-radius: 5px;
+    padding: 5px 8px;
+
+}
+.pagination-bed{
+
+    padding: 10px 10px;
+
+}
+.pagination-bed a{
+
+    margin-right: 10px;
+    color: #fff !important;
+    padding: 5px 12px;
+    background-color: #000;
+    border-radius: 5px;
+
+}
+.pagination-bed span{
+
+    margin-right: 10px;
+    color: #fff !important;
+    padding: 5px 8px;
+    background-color: red;
+    border-radius: 5px;
+
+}
+.pagination-bed span.dots{
+
+    margin-right: 5px;
+    color: #fff !important;
+    padding: 5px 8px;
+    background-color: #000;
+    border-radius: 5px;
+
+}

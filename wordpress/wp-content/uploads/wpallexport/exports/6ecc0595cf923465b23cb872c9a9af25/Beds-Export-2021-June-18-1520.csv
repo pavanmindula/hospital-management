@@ -1,0 +1,4 @@
+ID,Title,Date,"Patient Name","Patient Number","Date of Admission","Date of Discharge","Bed Status"
+18,"Bed 01",2021-06-18,"John Doe",P001,20210620,20210630,Unavailable
+20,"Bed 02",2021-06-18,"Grace William",P002,20210615,20210623,Occupied
+23,"Bed 03",2021-06-18,'-,'-,,,Available

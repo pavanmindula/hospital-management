@@ -39,4 +39,6 @@
     })
 </script>
 
+<?php wp_footer(); ?>
+
 </html>

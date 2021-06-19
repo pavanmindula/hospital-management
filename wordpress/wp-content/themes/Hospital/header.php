@@ -6,6 +6,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Hospital Bed Management</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <?php wp_head(); ?>
 
     <!-- font -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
