@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: beds
+ * Template Name: unaval-beds
  */
 get_header();
 
@@ -20,9 +20,9 @@ get_header();
         <div class="col-2 side-bar"> 
             <div class="side-inner"> 
                 <div class="row"> 
-                    <div class="col-12 bed-filter active"> <a href="<?php echo home_url(); ?>/">All Beds</a></div>
+                    <div class="col-12 bed-filter"> <a href="<?php echo home_url(); ?>/">All Beds</a></div>
                     <div class="col-12 bed-filter"> <a href="<?php echo home_url(); ?>/beds-available">Available Beds</a></div>
-                    <div class="col-12 bed-filter"> <a href="<?php echo home_url(); ?>/unavailable-beds">Unavailable Beds</a></div>
+                    <div class="col-12 bed-filter active"> <a href="<?php echo home_url(); ?>/unavailable-beds">Unavailable Beds</a></div>
                 </div>
             </div>
         </div>
@@ -44,7 +44,7 @@ get_header();
 
                     <?php
                         $paged = ( get_query_var( 'page' ) ) ? get_query_var( 'page' ) : 1;
-                        $args = array('post_type'=>'bed','posts_per_page' => 13,'paged' => $paged);
+                        $args = array('post_type'=>'bed','posts_per_page' => 13, 'tax_query' => array( array( 'taxonomy' => 'bed_availability', 'field' => 'name', 'terms' => array('Unavailable')) ),'paged' => $paged);
                         $the_query = new WP_Query($args);
                         if ( $the_query->have_posts() ):
                             while ( $the_query->have_posts() ) : $the_query->the_post(); ?>   

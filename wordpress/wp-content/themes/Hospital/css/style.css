@@ -138,3 +138,26 @@ p {
     border-radius: 5px;
 
 }
+
+.bed-filter {
+    
+    margin-right: 10px;
+    color: #fff !important;
+    padding: 5px 12px;
+    background-color: #000;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.bed-filter a{
+    color: #fff !important;
+
+}
+.bed-filter.active {
+    
+    margin-right: 10px;
+    color: #fff !important;
+    padding: 5px 12px;
+    background-color: red;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
