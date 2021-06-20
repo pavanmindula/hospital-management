@@ -168,3 +168,58 @@ p {
 .stats{
     margin-top: 20px;
 }
+
+/* Media Queries */
+
+
+@media (max-width: 480px) {
+}
+
+/*IPHONE 5*/
+@media (max-width: 320px) {
+
+
+}
+@media (min-width: 480px) and (max-width: 767px) {
+
+
+}
+@media (min-width: 768px) and (max-width: 1024px) and (orientation:landscape) {
+}
+@media(min-width:768px) and (max-height: 1024px) and (orientation:portrait){
+}
+@media (min-width: 1024px) and (max-width: 1280px) {
+    .side-inner {
+        padding: 40px 25px;
+    }
+    .main-body{
+        overflow: scroll;
+    }
+    .card{
+        width: 1100px;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1400px) {
+
+    .side-inner {
+        padding: 40px 25px;
+    }
+    .main-body{
+        overflow: scroll;
+    }
+    .card{
+        width: 1100px;
+    }
+	
+}
+@media (min-width: 1401px) and (max-width: 1600px) {
+	
+}
+@media (min-width: 1601px) and (max-width: 2000px) {
+
+}
+@media (min-width: 2001px) and (max-width: 3000px) {
+
+}
+
