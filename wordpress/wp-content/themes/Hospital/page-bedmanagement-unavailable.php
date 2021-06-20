@@ -74,7 +74,7 @@ get_header();
         </div>
         <div class="col-10">
             <div class="main-body">
-                <div class="card">
+                <div class="card" data-aos="zoom-in">
                     <div class="card-header">
                         <div class="row">
                             <div class="col-1"> Bed</div>

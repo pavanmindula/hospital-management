@@ -1,8 +1,14 @@
-/* Fonts
+/* Fonts*/
 
+@font-face {
+    src: url(../fonts/FiraSans-Regular.ttf);
+    font-family: FiraSans;
+}
+@font-face {
+    src: url(../fonts/FiraSans-Bold.ttf);
+    font-family: FiraSansBold;
+}
 
-
-*/
 
 /* General */
 
@@ -14,7 +20,7 @@ html {
     overflow-x: hidden;
 }
 body {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: FiraSans;
     font-size: 14px;
     overflow-x: hidden;
     background-color: #f5f6f6;
@@ -70,7 +76,7 @@ body {
 }
 .logo-tag{
     font-size: 20px;
-    font-family: 'Fira Sans', sans-serif;
+    font-family: FiraSans;
 }
 .side-inner{
     padding: 40px 50px;
@@ -80,7 +86,7 @@ body {
 
 }
 .card-header{
-    font-family: 'Fira Sans', sans-serif; 
+    font-family: FiraSansBold; 
     font-size: 16px;
     font-weight: 500;
 }
