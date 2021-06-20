@@ -2,7 +2,10 @@
 
 <div class="container-fuid">
     <div class="row">
-        aswdasdad
+        <div class="go-back bed-filter">
+            
+            <a href="<?php echo home_url(); ?>/">Invalid Url Please go back </a>
+        </div>
     </div>  
 </div>
 
